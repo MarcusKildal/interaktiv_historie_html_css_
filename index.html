@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8"/>
+    <!-- det er titlen -->
+    <title>The Creature</title>
+    <!-- det er for å linke css med html -->
+    <link href="historieprosjekt.css" rel="stylesheet" type="text/css"/>
+
+
+
+</head>
+<body>
+      <center>
+        <!-- det er min navbar å de har vær sin id vet ikke hva det heter men dø gjør ay de kan ha en id som jeg bruker for en scroll effeckt når du trykker på info eller movie -->
+      <div class="navbar">
+        <a href="#Info">Info</a>
+        <a href="#theinteractivehistory">Movie</a>
+      </div>
+      </center>
+
+      <!-- det jeg sankket om rett over -->
+      <br id="Info">
+      <br>
+      <br>
+      <hr>
+
+
+      <center><h1>Info</h1></center>
+      <center><h3>Wellcome to the interactive history made by Marcus Kildal-Santome</h3></center>
+      <h4>This interactive movie is about a kid who is around 18 years old. this kid wakes up in a house but its not a normal house, but it is a treehouse the kid finds out he is not alone out there that there is some kind of a Creatureout there in the wild. but this is not a normal storry it is a story you choose a story you can decide what you want to do in other words it is an interactive history!</h4>
+      <hr id="theinteractivehistory"/>
+      <br>
+      <center><h1> Movie</h1></center>
+      <!--her er det som velger størelsen å videoen min jeg har også navna alle mine mp4 fille med tall i from av min twine -->
+      <video width="889" height="500" controls id="video">
+        <source src="1.mp4" type="video/mp4">
+      </video>
+      <br>
+      <!-- her er knappene mine under vedo med en class å id og en onclick function så den regestrer hva so skjer nå du trykker på den  -->
+      <button onclick="video1()" type="button" class="knappentilvenstre" id="valg1">KNAPP 1</button>
+      <button onclick="video2()" type="button" class="knappentilmidten" id="valg2">KNAPP 2</button>
+      <button onclick="video3()" type="button" class="knappentilhøyere" id="valg3">RESET</button>
+
+      <br>
+      <hr>
+
+
+
+      </center>
+
+
+
+      <script type="text/javascript">
+        //dette er en variable for min vedeo id å jeg bruker den til å bytte video
+        var videoSrc = document.getElementById("video");
+        //dette er en variabble son gjør at det er mulig å bytte vedeo med SAMME knapp
+        var spillerValg = 1;
+      //dette here er bare så det ikke blir så my text
+        var Knapp1 = document.getElementById("valg1");
+        var Knapp2 = document.getElementById("valg2");
+        var Knapp3 = document.getElementById("valg3");
+        //dette er det som gjør at knap 3 er ikke synelig helt til jeg gjør det synelig
+        document.getElementById("valg3").style.display="none";
+ // function video1() function video2() function video3() er det samme bare knappene kan gi forskjelige verdier å mp4 filer
+//hvis jeg trykker på knapp 1 hvil onclick "kjøre" å gjør at nå spillervalg har en verdi på 1 å knapp 1 blir trykket endrer den verdig til 2.1 for eksempel å son vil den gå vidre som du ser under (der min første else if er ser vi at når verdien er 2.1 å knapp 1 blir trykker blir verdien endret til 1 å son har jeg gjort på alle 3 knappen med forskjelige vedier de kan gi hvis verdien er noe
+//hvis det ikke ga mening så kan jeg si det muntelig
+        function video1(){
+          if (spillerValg == "1") {
+            videoSrc.src ='2.1.mp4';
+            spillerValg = "2.1";
+            //når denne ifen kjører å knapp 1 blir trykket vil de gjør seg usynelige å knapp 3 vill bli synelig med et nytt navn rest som er brukt av innerhtml
+            Knapp1.style.display="none";
+            Knapp2.style.display="none";
+            Knapp3.style.display="inline-block";
+
+
+          }
+
+          else if (spillerValg == "2.1") {
+            videoSrc.src ='1.mp4';
+            spillerValg = "1";}
+
+          else if (spillerValg == "2.2") {
+            videoSrc.src ='3.1.mp4';
+            spillerValg = "3.1";}
+
+          else if (spillerValg == "3.1") {
+            videoSrc.src ='4.1.mp4';
+            spillerValg = "4.1";
+            Knapp1.style.display="none";
+            Knapp2.style.display="none";
+            //inline block bare det som hjelper at knappen er ved siden av.
+            Knapp3.style.display="inline-block";}
+
+          else if (spillerValg == "3.2") {
+            videoSrc.src ='4.3.mp4';
+            spillerValg = "4.3";
+            Knapp1.style.display="none";
+            Knapp2.style.display="none";
+            Knapp3.style.display="inline-block";}
+
+          else if (spillerValg == "4.2") {
+            videoSrc.src ='5.1.mp4';
+            spillerValg = "5.1";}
+
+          else if (spillerValg == "5.1") {
+            videoSrc.src ='6.1.mp4';
+            spillerValg = "6.1";
+            Knapp1.style.display="none";
+            Knapp2.style.display="none";
+            Knapp3.style.display="inline-block";}
+
+          else if (spillerValg == "6.2") {
+            videoSrc.src ='7.1.mp4';
+            spillerValg = "7.1";
+            Knapp1.style.display="none";
+            Knapp2.style.display="none";
+            Knapp3.style.display="inline-block";
+            // her ser vi at jeg bytter navne igjen
+            document.getElementById("valg3").innerHTML="Winner";}
+
+
+        }
+        function video2(){
+          if (spillerValg == "1") {
+            videoSrc.src ='2.2.mp4';
+            spillerValg = "2.2";
+            Knapp1.style.display="inline-block";
+            Knapp2.style.display="inline-block";
+            Knapp3.style.display="inline-block";}
+
+          else if (spillerValg == "2.2") {
+            videoSrc.src ='3.2.mp4';
+            spillerValg = "3.2";}
+
+          else if (spillerValg == "3.1") {
+            videoSrc.src ='4.2.mp4';
+            spillerValg = "4.2";}
+
+          else if (spillerValg == "3.2") {
+            videoSrc.src ='4.2.mp4';
+            spillerValg = "4.4";
+            Knapp1.style.display="none";
+            Knapp2.style.display="none";
+
+            Knapp3.style.display="inline-block";}
+
+          else if (spillerValg == "4.2") {
+            videoSrc.src ='5.2.mp4';
+            spillerValg = "5.2";
+            Knapp1.style.display="none";
+            Knapp2.style.display="none";
+            Knapp3.style.display="inline-block";}
+
+          else if (spillerValg == "5.1") {
+            videoSrc.src ='6.2.mp4';
+            spillerValg = "6.2";
+            document.getElementById("valg3").innerHTML="KNAPP 3";}
+
+          else if (spillerValg == "6.2") {
+            videoSrc.src ='7.2.mp4';
+            spillerValg = "7.2";
+            Knapp1.style.display="none";
+            Knapp2.style.display="none";
+            Knapp3.style.display="inline-block";
+            document.getElementById("valg3").innerHTML="RESET";}
+
+        }
+        function video3(){
+          if (spillerValg == "6.2") {
+            videoSrc.src ='7.3.mp4';
+            spillerValg = "7.3";
+            Knapp1.style.display="none";
+            Knapp2.style.display="none";
+            Knapp3.style.display="inline-block";
+            document.getElementById("valg3").innerHTML="RESET";}
+ //denne er else så vise ikke spiller valg = 6.2 at denne else skal kjøre hele tiden når knapp 3 blir trykket
+          else {
+            videoSrc.src = "1.mp4";
+            spillerValg = "1"
+            Knapp1.style.display="inline-block";
+            Knapp2.style.display="inline-block";
+            Knapp3.style.display="none";}
+            document.getElementById("valg3").innerHTML="RESET";
+        }
+
+      </script>
+    </body>
+</html>

@@ -1,0 +1,108 @@
+
+/*det som lager en scroll følse å ikke teleporterer */
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  /*endrer background*/
+  background: black;
+  background-size: 100% 100%;
+  /* endrer tekst farge*/
+  color: white;
+  /* gjør den mindre bre å min hr line ikke blir lang */
+  width: 60%;
+  margin: auto;
+}
+h1 {
+  color: white;
+
+}
+/* det er det som lager linjen*/
+hr {
+  height:4px ;
+  background-color:red;
+  border-width:0;
+}
+/* det er farge a positionen til nav baren min*/
+.navbar {
+  position: fixed;
+  transform: translate(-50%,0%);
+  left: 50%;
+  overflow: hidden;
+  background-color: red;
+}
+/*  det er det som gjør den en link å at den føler deg og at det er der jeg endrer text frage å størelse*/
+
+.navbar a {
+
+  float: left;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  padding: 14px 41px;
+  text-decoration: none;
+
+}
+/* det er bare når jeg hovrer over å hva den endrer farge til*/
+
+.navbar a:hover{
+  color: red;
+  background-color: white;
+}
+/*det er den lile røde linjen rund min mp4 fil/ video boks */
+video{
+  transform: translate(-50%,0%);
+  position: relative;
+    left: 50%;
+    border: 1px solid red;
+}
+
+
+/* disse er tre knapper de har samme jeg ville lage forskjelige knapper men fikk ikke tid til det så det kunne egentlig bare ha en id for alle 3 knappene*/
+.knappentilvenstre{
+  background-color: red;
+  border: 3px solid white;
+  color: white;
+  padding: 17px 34px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transform: translate(-150%,0%);
+  position: relative;
+    left: 50%;
+}
+
+.knappentilmidten{
+  background-color: red;
+  border: 3px solid white;
+  color: white;
+  padding: 17px 34px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transform: translate(-150%,0%);
+  position: relative;
+    left: 50%;
+}
+.knappentilhøyere{
+  background-color: red;
+  border: 3px solid white;
+  color: white;
+  padding: 17px 34px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transform: translate(-150%,0%);
+  position: relative;
+    left: 50%;
+}
